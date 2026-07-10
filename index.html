@@ -26,9 +26,37 @@
         <a href="#demo">Demo</a>
         <a href="#why-it-matters">Why It Matters</a>
         <a href="#cta">Try It</a>
+        <div class="auth-slot" aria-label="Account actions">
+          <button class="auth-button" type="button" id="sign-in-button">Sign In</button>
+
+          <div class="auth-user" id="auth-user-panel" hidden>
+            <span class="auth-user-name" id="auth-user-name"></span>
+            <span class="auth-points-badge" id="auth-points-badge">🌱 0 pts</span>
+            <a class="auth-sign-out" href="#" id="sign-out-button">Sign Out</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
+
+  <div class="auth-modal" id="auth-modal" hidden>
+    <div class="auth-modal-backdrop" data-close-auth-modal></div>
+
+    <div class="auth-modal-panel card" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <p class="eyebrow">Join GreenLens</p>
+      <h2 id="auth-modal-title">Start Recycling</h2>
+      <p class="auth-modal-copy">Enter a display name to unlock your local recycling dashboard.</p>
+
+      <form class="auth-form" id="auth-form">
+        <label class="auth-field" for="display-name-input">
+          <span>Display Name</span>
+          <input id="display-name-input" name="displayName" type="text" maxlength="32" autocomplete="nickname" required>
+        </label>
+
+        <button class="button button-primary auth-submit" type="submit">Start Recycling</button>
+      </form>
+    </div>
+  </div>
 
   <main>
     <section class="hero section" id="hero">
@@ -135,6 +163,41 @@
         </div>
 
         <p class="source-line">Source: NEA, nea.gov.sg</p>
+      </div>
+    </section>
+
+    <section class="section section-alt dashboard-section" id="dashboard" hidden>
+      <div class="container">
+        <div class="dashboard-card card">
+          <div class="section-heading dashboard-heading">
+            <p class="eyebrow">Your dashboard</p>
+            <h2>Welcome, <span id="dashboard-name"></span></h2>
+            <p>Track your points, level progress, and recent recycling actions.</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="dashboard-summary">
+              <p class="dashboard-label">Total points</p>
+              <p class="dashboard-points" id="dashboard-points">0</p>
+              <p class="dashboard-level" id="dashboard-level">Eco Starter</p>
+
+              <div class="progress-track" aria-hidden="true">
+                <div class="progress-fill" id="dashboard-progress-fill"></div>
+              </div>
+
+              <p class="progress-caption" id="dashboard-progress-caption">0 of 50 points toward Recycling Rookie</p>
+            </article>
+
+            <article class="dashboard-activity">
+              <div class="dashboard-actions-row">
+                <button class="button button-primary" type="button" id="log-recycle-button">Log a Recycle</button>
+              </div>
+
+              <h3>Recent activity</h3>
+              <ul class="history-list" id="dashboard-history"></ul>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
