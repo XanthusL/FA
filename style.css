@@ -1,16 +1,16 @@
 :root {
-  --bg: #f6f4ed;
-  --bg-alt: #dde9de;
+  --bg: #f5f7f5;
+  --bg-alt: #e8f0e8;
   --surface: #ffffff;
-  --surface-muted: #f1f5ee;
-  --text: #1e2422;
-  --text-muted: #5f6b66;
-  --border: rgba(16, 37, 30, 0.12);
-  --brand-dark: #10251e;
-  --brand: #2e6b4f;
-  --brand-soft: #6daf6c;
-  --accent: #d5a84a;
-  --shadow: 0 20px 45px rgba(16, 37, 30, 0.08);
+  --surface-muted: #eef4ee;
+  --text: #1b1b1b;
+  --text-muted: #5f675f;
+  --border: rgba(46, 125, 50, 0.14);
+  --brand-dark: #1b1b1b;
+  --brand: #2e7d32;
+  --brand-soft: #a5d6a7;
+  --accent: #6daf6c;
+  --shadow: 0 20px 45px rgba(27, 27, 27, 0.08);
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
@@ -29,8 +29,8 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(109, 175, 108, 0.12), transparent 30%),
-    radial-gradient(circle at top right, rgba(213, 168, 74, 0.1), transparent 28%),
+    radial-gradient(circle at top left, rgba(46, 125, 50, 0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(165, 214, 167, 0.18), transparent 28%),
     var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -64,7 +64,7 @@ img {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(12px);
-  background: rgba(246, 244, 237, 0.85);
+  background: rgba(245, 247, 245, 0.9);
   border-bottom: 1px solid var(--border);
 }
 
@@ -90,7 +90,7 @@ img {
   height: 2.4rem;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--brand), var(--brand-soft));
-  box-shadow: inset 0 0 0 0.35rem rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 0.35rem rgba(255, 255, 255, 0.25);
 }
 
 .site-nav {
@@ -198,8 +198,8 @@ img {
 .placeholder-visual {
   width: 100%;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(46, 107, 79, 0.14), rgba(213, 168, 74, 0.14));
-  border: 1px dashed rgba(16, 37, 30, 0.18);
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.12), rgba(165, 214, 167, 0.28));
+  border: 1px dashed rgba(46, 125, 50, 0.18);
 }
 
 .placeholder-visual-large {
@@ -251,7 +251,7 @@ img {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
-  background: rgba(46, 107, 79, 0.12);
+  background: rgba(46, 125, 50, 0.12);
   color: var(--brand);
   font-size: 0.9rem;
   font-weight: 700;
@@ -282,6 +282,12 @@ img {
   margin: 0.75rem 0 0;
 }
 
+.source-line {
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
 .cta-section {
   padding-top: 3rem;
 }
@@ -289,7 +295,7 @@ img {
 .cta-card {
   grid-template-columns: 1fr auto;
   align-items: center;
-  background: linear-gradient(135deg, rgba(16, 37, 30, 0.98), rgba(46, 107, 79, 0.94));
+  background: linear-gradient(135deg, rgba(27, 27, 27, 0.98), rgba(46, 125, 50, 0.96));
   color: #fff;
 }
 
@@ -300,12 +306,12 @@ img {
 
 .cta-card .button-primary {
   background: var(--accent);
-  color: var(--brand-dark);
+  color: #fff;
 }
 
 .site-footer {
   border-top: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.42);
 }
 
 .footer-bar {
